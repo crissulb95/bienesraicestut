@@ -1,0 +1,491 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*Cada rem = 10px*/
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* GLOBALES GLOBALES */
+    .contenedor{
+        width: 90%;
+        max-width: 100rem; 
+        margin: 0 auto;
+    }
+
+
+
+    img{
+        max-width: 100%;
+    }
+
+    h1{
+        font-size: 3.4rem;
+    }
+    h2{
+        font-size: 3.0rem;
+    }
+    h3{
+        font-size: 2.6rem;
+    }
+    h4{
+        font-size: 2.2rem;
+    }
+
+    /* UTILIDADES*/
+
+    .seccion{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .centrar-texto{
+        text-align: center;
+    }
+
+    .fw-300{
+        font-weight: 300;
+    }
+
+    .d-block{
+        display: block!important;
+    }
+
+    .contenido-centrado{
+        max-width: 80rem;
+    }
+
+/*HEADER HEADER*/
+.site-header{
+    background: #333;
+    padding: 1rem 0 3rem 0;
+}
+.site-header.inicio{
+    background: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.container-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container-header{
+        text-align: left;
+    }
+}
+
+.container-header h1{
+    padding-bottom: 5rem;
+    color: #fff;
+    display: block;
+}
+
+.barra{
+    padding-top: 3rem;
+} 
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.navegacion a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a{
+        display: inline-block;
+        margin-right: 1.5rem;
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type{
+        margin-right: 0;
+    }
+    .container-header h1{
+        text-align: left;
+        max-width: 50rem;
+    }
+}
+
+
+.navegacion a:hover{
+    color:#71b100;
+}
+
+
+
+
+/* ICONOS NOSOTROS*/
+
+.contenedor h2{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.icono p{
+    width: 90%;
+    margin: 2rem auto 6rem auto;
+}
+@media (min-width: 768px) {
+    .iconos-nosotros{
+        display: flex; 
+        justify-content: space-between;
+    }
+    .icono{
+        flex-basis: calc(33.3% - 2rem);
+    }
+}
+
+
+.icono{
+    text-align: center;
+}
+
+.icono h3{
+    text-transform: uppercase;
+}
+
+/* CASAS Y DEPAS EN VENTA NO UTILIDADES. CSS INDIVIDUAL*/
+@media (min-width: 768px) {
+    .contenedor-cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .anuncio{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+
+.anuncio{
+    border: 1px solid #b5b5b5;
+    background: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenido-anuncio p,
+.contenido-anuncio h3{
+    margin: 0;
+}
+
+.precio{
+    color: #71b100;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+
+.iconos-caracteristicas li{
+    display: flex;
+}
+
+.iconos-caracteristicas li img{
+    margin-right: 2rem;
+}
+
+.boton{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 3rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    display: block;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton-amarillo{
+    background: #e08709;
+}
+
+.boton-verde{
+    background: #71b100;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* CONTACTO */
+
+.imagen-contacto{
+height: 40rem;
+display: flex;
+align-items: center;
+background: url(../img/encuentra.jpg);
+background-position: center center;
+background-size: cover;
+}
+
+.contenido-contacto{
+    flex: 0 0 90%;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/* SECCION INFERIOR */
+
+@media (min-width: 768px) {
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .blog{
+        flex-basis: 60%;
+    }
+    
+    .testimonio{
+        flex-basis: calc(40% - 1rem);
+    }
+}
+
+.entrada-blog{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+.entrada-blog .imagen-blog{
+    flex-basis: 40%;
+}
+
+.entrada-blog .entrada-texto{
+    flex-basis: calc( 60% - 1rem );
+    line-height: 1.4;
+    padding-left: 2rem;
+}
+
+.entrada-blog .entrada-texto h4{
+    margin:0;
+}
+
+.entrada-blog .entrada-texto a{
+    text-decoration: none;
+    color: #000;
+}
+
+.entrada-texto a::after{
+    content: "";
+    display: block;
+    margin-top: 0.5rem;
+    width: 15rem;
+    height: .3rem;
+    background: #71b100;
+}
+
+.entrada-texto span{
+    color: #e08709;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+    background-color: #71b100;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.testimonial p{
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.testimonial blockquote::before{
+    content: "";
+    background: url(../img/comilla.svg) no-repeat;
+    width: 4em;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 4rem;
+    font-weight: 300;
+}
+
+/* FOOTER */
+
+.site-footer{
+    margin: 0;
+    background: #333;
+}
+
+.contenedor-footer{
+    padding: 3rem 0;
+    text-align: center;
+} 
+
+.contenedor-footer .navegacion{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenedor-footer .navegacion{
+        display: block;
+    }
+}
+
+.copyright{
+    margin: 0;
+    color: #fff;
+}
+
+
+/* PAGINAS INTERNAS*/
+/* pagina nosotros */
+
+main.contenedor h1.titulo {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.contenido-nosotros{
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+}
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 0 3rem 0;
+}
+
+/* pagina plantilla anuncio */
+
+main.contenedor h2.titulo,h1.titulo {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.resumen-propiedad{
+    display: flex;
+    align-items: ;
+    justify-content: space-between;
+}
+
+/* pagina de formulario de contacto*/
+
+.contacto p{
+    font-size: 1.4rem;
+}
+
+label{
+    font-size: 1.7rem;
+    font-weight: 700;
+    display: block;
+}
+
+legend{
+    font-size: 3rem;
+    color: #4f4f4f;
+    text-transform: uppercase;
+}
+
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea{
+    height: 20rem;
+}
+
+input[type="radio"]{
+    margin: 0;
+    width: auto;
+}
+
+.tipo-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="submit"].boton.boton-amarillo{
+    border-radius: 0.5rem;
+}
+.boton:hover{
+    cursor: pointer;
+}
